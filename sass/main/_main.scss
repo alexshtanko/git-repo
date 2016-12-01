@@ -1,0 +1,37 @@
+@import "breadcrumbs/breadcrumbs";
+@import "main/services";
+.main{
+	width: 100%;
+	/*padding: 42px 0 0 0;*/
+}
+.main_full{
+	width: 100%;
+}
+.section_icon{
+	position: relative;
+	text-align: center;
+}
+.section_title{
+	text-align: center;
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	color: #ffffff;
+	line-height: 36px;
+	font-family: 'Cormorant', serif;
+	font-weight: 300;
+	margin: 96px 0 32px 0;
+}
+@import "main/useful";
+
+@import "main/contact";
+
+@import "main/article";
+
+@import "main/galery";
+
+@import "main/service";
+
+@import "main/popup";
+
+@import "main/slider";

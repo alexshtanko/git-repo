@@ -1,0 +1,37 @@
+.header_nav{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: -100%;
+	top: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 3;
+	padding: 25% 0 0;
+	@include transition(left, .2s);
+}
+.header_nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -123px;
+}
+.header_nav li{
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.header_nav a{
+	display: block;
+	width: 100%;
+	padding: 8px 0;
+	text-transform: uppercase;
+	color: $main_color;
+	font-size: 18px;
+	letter-spacing: .75px;
+	font-family: "LatoLight", sans-serif;
+	
+}

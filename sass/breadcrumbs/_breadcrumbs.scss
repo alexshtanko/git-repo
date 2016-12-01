@@ -1,0 +1,53 @@
+.breadcrumbs{
+	position: relative;
+	padding: 0 0 0 24px;
+	margin-bottom: 50px;
+	display: none;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -12px;
+		background: url('../img/icon_7.png') no-repeat;
+		width: 24px;
+		height: 24px;
+
+	}
+	a{
+		color: #ffffff;
+		font-size: 14px;
+		&:hover{
+			color: #40cb93;
+		}
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li{
+		float: left;
+		margin-left: 22px;
+		position: relative;
+		&:before{
+			content: '>';
+			position: absolute;
+			left: -13px;
+			bottom: 0;
+			color: $main_color;
+		}
+		&:first-child{
+			margin-left: 14px;
+			&:before{
+				content: '';
+				display: none;
+			}
+		}
+		&:last-child{
+			a{
+				color: #40cb93;
+			}
+		}
+	}
+}

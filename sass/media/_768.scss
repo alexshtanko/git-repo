@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+	
+	.header_nav a{
+		font-size: 18px;
+	}
+	.section_icon{
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 40%;
+			height: 1px;
+			background: rgba(255, 255, 255, .5);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 40%;
+			height: 1px;
+			background: rgba(255, 255, 255, .5);
+		}
+	}
+	.service_table{
+		.service_item{
+			width: (365/806)*100%;
+		}
+		.service_item_body{
+			height: 145px;
+		}
+	}
+	.modal.in .modal-dialog{
+		width: 440px;
+	}
+	.modal-dialog{
+		margin-left: -220px;
+		width: 440px;
+		left: 50%;
+	}
+	.pop_up{
+		/*margin-left: -220px;*/
+		width: 440px;
+	}
+	.pop_up_inner{
+		padding: 50px 100px;
+	}
+}

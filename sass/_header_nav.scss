@@ -1,0 +1,23 @@
+.header_nav{
+	width: 804px;
+	float: left;
+	background: red;
+}
+.header_nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.header_nav li{
+	width: 100%;
+	text-align: center;
+}
+.header_nav a{
+	padding: 8px 0;
+	display: block;
+	width: 100%;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	color: #ffffff;
+	font-size: 18px;
+}

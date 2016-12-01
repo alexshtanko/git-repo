@@ -1,0 +1,70 @@
+.widget{
+	width: 100%;
+	position: relative;
+	.widget_title{
+		font-size: 36px;
+		font-family: 'Cormorant', serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: $main_color;
+		padding: 33px (40/1140)*100% 30px;
+		letter-spacing: .5px;
+	}
+}
+.sidebar{
+	.widget{
+		padding: 40px 0;
+		margin-bottom: 85px;
+	}
+}
+.sidebar .widget:first-child{
+	margin-bottom: 0;
+}
+.sidebar .widget{
+	.col-md-12{
+		position: initial;
+	}
+	.widget_title{
+		font-size: 18px;
+		font-family: 'Cormorant', serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: $main_color;
+		letter-spacing: .5px;
+		padding: 0;
+		text-align: center;
+		position: relative;
+		margin-bottom: 40px;
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: -11px;
+			left: 50%;
+			margin-left: -38px;
+			width: 76px;
+			height: 3px;
+			background: $secondary_color
+		}
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		border-top: 1px solid #303030;
+		&:first-child{
+			border-top: none;
+		}
+		a{
+			padding: 10px 0;
+			font-size: 14px;
+			display: block;
+			text-align: center;
+			@include transition(color, .2s);
+			&:hover{
+				color: $third_color;
+			}
+		}
+	}
+}

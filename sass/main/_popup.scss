@@ -1,0 +1,317 @@
+.all{
+	width: 100%;
+	height: 100%;
+	padding: 10% 0;
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	left: -9999px;
+	z-index: 100;
+	@include transition(opacity, .3s);
+}
+.all_show{
+	left: 0;
+	opacity: .5;
+}
+.modal-dialog{
+	margin-left: -150px;
+	margin-top: 65px;
+	width: 300px;
+	left: 50%;
+}
+.modal-content{
+	background: none;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+}
+.pop_up{
+	position: fixed;
+	z-index: 101;
+	top: 20%;
+	margin-left: -150px;
+	width: 300px;
+	left: -2000px;
+	@include transition(all, .5s);
+}
+.pop_up_show{
+	left: 50%;
+}
+.pop_up_inner{
+	padding: 30px 50px;
+	background: rgba(0, 0, 0, .8);
+	p{
+		margin: 40px 0 0;
+		font-family: "LatoLightItalic", sans-serif;
+		font-size: 12px;
+		letter-spacing: .5px;
+		line-height: 25px;
+		color: $main_color;
+	}
+}
+.pop_up_footer{
+	width: 100%;
+	padding: 10px 0px;
+}
+.pop_up_close{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	opacity: .9;
+
+	&:hover{
+		&:before, &:after{
+			background: $btn_hover;
+		}
+	}
+	&:before{
+		content: '';
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		top: 14px;
+		left: 0;
+		background: $main_color;
+		@include rotate(45deg);
+		@include transition(all, .3s);
+	}
+	&:after{
+		content: '';
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		top: 14px;
+		left: 0;
+		background: $main_color;
+		@include rotate(-45deg);
+		@include transition(all, .3s);
+	}
+}
+.pop_up_header{
+	font-size: 18px;
+	font-family: 'Cormorant', serif;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	color: $main_color;
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	span{
+		position: relative;
+		display: block;
+		float: left;
+		&:before{
+			content: '';
+			width: 49px;
+			height: 2px;
+			position: absolute;
+			bottom: -8px;
+			background: $secondary_color;
+			display: block;
+		}
+	}
+}
+.pop_up_login, .pop_up_forgot{
+	.pop_up_header{
+		&:before{
+			content: '';
+			position: absolute;
+			left: -40px;
+			top: 2px;
+			background: url('../img/pop_up_header.png') no-repeat;
+			width: 25px;
+			height: 25px;
+		}
+	}
+}
+.pop_up_registration{
+	.pop_up_header{
+		&:before{
+			content: '';
+			position: absolute;
+			left: -38px;
+			top: 4px;
+			background: url('../img/pop_up_registration.png') no-repeat;
+			width: 22px;
+			height: 23px;
+		}
+	}
+}
+.pop_up_callback{
+	.pop_up_header{
+		&:before{
+			content: '';
+			position: absolute;
+			left: -38px;
+			top: 4px;
+			background: url('../img/pop_up_callback.png') no-repeat;
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+.pop_up_body{
+	width: 100%;
+	position: relative;
+	.name{
+		position: relative;
+		&:before{
+			content: '\f007';
+			position: absolute;
+			top: 5px;
+			left: -33px;
+			font: normal normal normal 22px/1 FontAwesome;
+			color: $main_color;
+			@include transition(all, .3s);
+		}
+	}
+	.email{
+		position: relative;
+		&:before{
+			content: '\f0e0';
+			position: absolute;
+			top: 5px;
+			left: -35px;
+			font: normal normal normal 20px/1 FontAwesome;
+			color: $main_color;
+			@include transition(all, .3s);
+		}
+	}
+	.pwd{
+		position: relative;
+		&:before{
+			content: '\f023';
+			position: absolute;
+			top: 5px;
+			left: -33px;
+			font: normal normal normal 26px/1 FontAwesome;
+			color: $main_color;
+			@include transition(all, .3s);
+		}
+	}
+	.name, .email, .pwd{
+		&:hover{
+			&:before{
+				color: $btn_hover;
+			}
+		}
+	}
+	.form_alert{
+		position: relative;
+		color: $secondary_color;
+		font-family: "LatoLight" ,sans-serif;
+		font-size: 12px;
+		font-style: italic;
+		height: 37px;
+		padding: 10px 0;
+		display: none;
+		&:before{
+			content: 'x';
+			font-family: "LatoBold" ,sans-serif;
+			font-size: 13px;
+			position: absolute;
+			left: -30px;
+			top: 10px;
+		}
+	}
+	.form_alert_show{
+		display: block;
+	}
+	.cbx{
+		position: relative;
+		height: 16px;
+		height: 37px;
+		padding: 15px 0;
+		.cbx_1_wrapper{
+			position: absolute;
+			left: -35px;
+			top: 18px;
+			width: 14px;
+			height: 14px;
+			z-index: 2;
+			cursor: pointer;
+			&:before{
+				content: '';
+				width: 14px;
+				height: 14px;
+				border: 1px solid $main_color;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+			}
+			&:after{
+				content: '\f00c';
+				position: absolute;
+				left: 3px;
+				top: 2px;
+				font: normal normal normal 9px/1 FontAwesome;
+				color: $main_color;
+				z-index: 2;
+				opacity: 0;
+			}
+		}
+		label{
+			position: relative;
+			color: $main_color;
+			font-family: "LatoLight" ,sans-serif;
+			font-size: 12px;
+			font-style: italic;
+			cursor: pointer;
+		}
+	}
+	.cbx.checked{
+		.cbx_1_wrapper{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+	.cbx_1{
+		position: absolute;
+		left: -35px;
+		top: 18px;
+		background: none !important;
+		opacity: 0;
+	}
+}
+input[type=checkbox] + label:before {
+	content: '';
+	width: 14px;
+	height: 14px;
+	border: 1px solid $main_color;
+	position: absolute;
+	left: -35px;
+	top: 1px;
+}
+input[type=checkbox] {
+	display: none;
+}
+input[type=checkbox]:not(checked){
+	background: red;
+}
+input[type=checkbox]:checked + label:before {
+	content: '\2713';
+	color: $main_color;
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.get_forgot_pwd{
+	float: left;
+	color: $main_color;
+	font-family: "LatoLight" ,sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	cursor: pointer;
+}
+.get_registration{
+	float: right;
+	color: $main_color;
+	font-family: "LatoLight" ,sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	cursor: pointer;
+}

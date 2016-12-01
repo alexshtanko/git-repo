@@ -1,0 +1,142 @@
+.post{
+	margin-bottom: 85px;
+	/*min-height: 534px;*/
+	.widget_title{
+		font-size: 36px;
+		font-family: 'Cormorant', serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: $main_color;
+		padding: 35px (40/1140)*100% 30px;
+		letter-spacing: .5px;
+	}
+	.post_img{
+		width: 100%;
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	h2{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 24px;
+		line-height: 32px;
+		font-family: 'Cormorant', serif;
+    	font-weight: 400;
+    	text-transform: uppercase;
+    	color: $third_color;
+    	a{
+    		font-size: 24px;
+			line-height: 32px;
+			font-family: 'Cormorant', serif;
+	    	font-weight: 400;
+	    	text-transform: uppercase;
+	    	color: $third_color;
+	    	@include transition(color, .2s);
+	    	&:hover{
+	    		color: $main_color;
+	    	}
+    	}
+	}
+	.post_body{
+		padding: 26px (38/1140)*100% 96px;
+		background: rgba(0, 0, 0, .5);
+		font-size: 18px;
+		font-family: "LatoLight", sans-serif;
+		color: $main_color;
+		
+		position: relative;
+	}
+	.post_date{
+		display: block;
+		padding: 5px 0 0;
+		text-align: center;
+	}
+	.post_amount{
+		display: block;
+		padding: 5px 0 0;
+		text-align: center;
+		span, a{
+			color: $third_color;
+			font-family: "LatoBold", sans-serif;
+			text-decoration: underline;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+	}
+	.post_text{
+		p{
+			margin-top: 22px;
+		}
+	}
+	.read_more{
+		position: absolute;
+		right: 50%;
+		bottom: 26px;
+		margin-right: -111px;
+	}
+}
+
+.posts_1{
+	width: 100%;
+	padding: 73px 0;
+	.post_1{
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		margin-top: 132px;
+	}
+	
+	.post_1:nth-child(1){
+		margin-top: 0px;
+	}
+	
+	h2{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: .5px;
+		font-family: 'Cormorant', serif;
+    	font-weight: 400;
+    	text-transform: uppercase;
+    	color: $secondary_color;
+    	a{
+    		font-size: 18px;
+			line-height: 24px;
+			letter-spacing: .5px;
+			font-family: 'Cormorant', serif;
+	    	font-weight: 400;
+	    	text-transform: uppercase;
+	    	color: $secondary_color;
+	    	@include transition(color, .2s);
+	    	&:hover{
+	    		color: $main_color;
+	    	}
+    	}
+	}
+	.post_1_img{
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	.post_1_body{
+		padding: 36px (35/442)*100%;
+	}
+	p{
+		max-height: 83px;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	.read_more{
+		position: relative;
+		left: 50%;
+		margin-left: -111px;
+	}
+}

@@ -1,0 +1,415 @@
+@media (min-width: 992px) {
+	.get_nav, .get_search, .header_nav_close, .header_search_close{
+		display: none;
+	}
+	.header{
+		&:before{
+			content: '';
+			width: 100%;
+			height: 60px;
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+	.header_top{
+		height: 60px;
+		padding: 21px 0 0 0;
+		position: fixed;
+		z-index: 2;
+		/*background: rgba(0, 0, 0, 0.5);*/
+	}
+	.header_nav{
+		position: relative;
+		width: auto;
+		height: auto;
+		padding: 0;
+		left: 0;
+	}
+	.header_nav ul{
+		position: relative;
+	    width: 100%;
+	    top: 50%;
+	    margin: 0;
+	}
+	.header_nav li{
+		width: auto;
+		padding: 0;
+		float: left;
+		margin-left: 5%;
+		a{
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				width: 0;
+				height: 2px;
+				background: $secondary_color;
+				@include transition(width, .2s);
+			}
+			&:hover{
+				&:before{
+					width: 100%;
+				}
+			}
+		}
+		&.active{
+			a{
+				&:before{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.header_nav li:first-child{
+		margin-left: 0
+	}
+	.header_nav a{
+		padding: 0;
+		display: inline;
+		font-size: 16px;
+	}
+	.header_login{
+		text-align: left;
+		font-size: 12px;
+		padding: 2px 0 0;
+		a{
+			text-transform: none;
+			font-size: inherit;
+		}
+	}
+	.header_search{
+		position: relative;
+		left: 0;
+		top: 16px;
+		padding: 0;
+		height: 24px;
+		background: none;
+		form{
+			height: 24px;
+			position: relative;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+		.inpt_1{
+			height: 24px;
+			border: none;
+			border-bottom: 1px solid $main_color;
+			padding: 0 20px 0 0;
+			font-size: 12px;
+		}
+		.sbmt_1{
+			width: 12px;
+			height: 14px;
+			right: 0;
+			top: 5px;
+			margin: 0;
+		}
+	}
+	.header_logo{
+		
+	}
+	.header_site_name{
+		a{
+			font-size: 48px;
+		}
+	}
+	.header_search{
+		form:before{
+			content: '';
+			position: absolute;
+			right: 2px;
+			top: 4px;
+			border: 2px solid $main_color;
+			width: 12px;
+			height: 12px;
+			border-radius: 50px;
+
+		}
+		form:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 14px;
+			background: $main_color;
+			width: 5px;
+			height: 2px;
+			@include rotate(45deg);
+		}
+	}
+
+	/*-----Main-------*/
+	.breadcrumbs{
+		display: block;
+	}
+	.main{
+		width: (806/1140)*100%;
+		float: right;
+		padding-top: 0;
+	}
+	.hello .hello_body{
+		padding: 0 0 30px 0;
+	}
+	.useful_article{
+		width: (588/1140)*100%;
+	}
+	.useful_category{
+		margin-top: 30px;
+		width: (442/1140)*100%;
+	}
+	.popular_article{
+		margin-top: 30px;
+		width: (330/1140)*100%;
+		float: left;
+		margin-left: (75/1140)*100%;
+		margin-bottom: 25px;
+	}
+
+	.contact_box{
+		width: 954px;
+		margin: 34px auto;
+	}
+	.contact_box_text{
+		margin-top: 0;
+		text-align: left;
+		p{
+			img{
+				margin: 0 10px;
+			}
+		}
+	}
+	.article{
+		.article_footer{
+			text-align: left;
+			padding-top: 50px;
+			.article_footer_title{
+				margin-top: 0;
+				text-align: left;
+			}
+		}
+	}
+	.article_contact_form{
+		p{
+			margin: 0;
+		}
+	}
+	/*----Main end----*/
+
+	/*-----Post ---------*/
+	.post{
+		.post_body{
+			padding: 26px (38/1140)*100%;
+			/*height: 221px;
+			overflow: hidden;*/
+		}
+		.post_text{
+			height: 170px;
+			overflow: hidden;
+		}
+		.read_more{
+			position: absolute;
+			bottom: 26px;
+			right: (38/1140)*100%;
+			margin: 0;
+		}
+		h2{
+			text-align: left;
+		}
+	}
+
+	.posts_1{
+		padding: 73px 0;
+		.post_1{
+			float: left;
+			width: (442/1140)*100%;
+			background: rgba(0, 0, 0, 0.5);
+			margin-top: 132px;
+		}
+		.post_1:nth-child(2n+1){
+			float: right;
+		}
+		.post_1:nth-child(1){
+			margin-top: 0px;
+		}
+		.post_1:nth-child(2){
+			margin-top: 0px;
+		}
+		.read_more{
+			left: 0;
+			margin-left: 0;
+		}
+		h2{
+			text-align: left;
+		}
+	}
+
+	/*----Post end ------*/
+
+	/*---------Service -------*/
+	.service_item{
+		padding: 35px (35/806)*100% 35px 0;
+	}
+	.service_item_img{
+		float: left;
+		width: (289/771)*100%;
+		padding-top: 25px;
+	}
+	.service_item_body{
+		float: right;
+		width: (480/771)*100%;
+		margin-top: 0;
+		h2{
+			text-align: left;
+		}
+	}
+	
+	/*-------Service end ------*/
+
+	/*-----Galery -----*/
+	.galery_item{
+		width: (361/806)*100%;
+		float: left;
+		&:nth-child(2n){
+			float: right;
+		}
+	}
+	.galery_item_body{
+		padding: 50px (30/361)*100% 40px;
+	}
+	/*-----Galery end----*/
+
+
+	/*-----Sidebar-----*/
+	.sidebar{
+		width: (294/1140)*100%;
+		float: left;
+		margin-bottom: 0;
+		/*padding: 0 40px;
+		padding: 0 (40/1140)*100%;*/
+	}
+	.sidebar{
+		.widget{
+			padding: 40px (35/293)*100% 34px;
+			padding: 0 (35/293)*100%;
+			/*min-height: 534px;*/
+			margin-bottom: 85px;
+			&:first-child{
+				margin-bottom: 0;
+			}
+		}
+		.col-md-12{
+		}
+	}
+	.sidebar_carousel{
+		.owl-nav{
+			display: block;
+		}
+	}
+	.sidebar_subscribe{
+		/*position: absolute;
+		bottom: 32px;
+		left: 0;
+		margin: 0 (35/293)*100%;*/
+	}
+	.sidebar_carousel{
+		/*position: absolute;
+		bottom: 32px;
+		left: 0;
+		padding: 0 (35/293)*100%;
+		height: 166px;
+		width: 100%;
+		margin: 0;*/
+	}
+	.sidebar .widget{
+		li{
+			a{
+				text-align: left;
+			}
+		}
+	}
+
+	/*-----Sidebar end----*/
+
+	/*-----Footer----------*/
+	.footer_contact{
+		margin-top: 0;
+		padding-left: 25%;
+		text-align: left;
+	}
+	.footer_contact_address{
+		width: 200px;
+	}
+	.footer_logo{
+		margin: 0;
+	}
+	.footer_sn{
+		margin-top: 0;
+	}
+	.footer{
+		ul{
+			li{
+				padding-left: 28.5%;
+				text-align: left;
+			}
+		}
+		.footer_sn{
+			ul li{
+				padding-left: 28%;
+			}
+		}
+	}
+	.footer_copyright{
+		text-align: left;
+		padding: 0;
+	}
+	.footer_studio{
+		text-align: right;
+		padding: 0;
+	}
+
+	/*------Footer end-------*/
+
+	/*------Form -----------*/
+	.sbmt_3{
+		width: 220px;
+	}
+	.inpt_3{
+		width: 286px;
+		margin-right: 80px;
+	}
+	/*--------Form end ------*/
+
+.flex_pager{
+	display: block;
+}
+.slider_title{
+	padding: 0 0 0 105px;
+}
+	.flexslider{
+		padding: 0 105px !important;
+		margin: 0 0 35px 0;
+	}
+	.flex-direction-nav .flex-prev{
+	left: 0;
+	top: 0;
+	margin: 0;
+	background: $main_color;
+	height: 100%;
+	width: 75px;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 1;
+}
+.flex-direction-nav .flex-next{
+	right: 0;
+	top: 0;
+	margin: 0;
+	background: $main_color;
+	height: 100%;
+	width: 75px;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 1;
+}
+}

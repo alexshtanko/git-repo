@@ -1,0 +1,140 @@
+@import "fonts/fonts";
+@import "mixins";
+
+$main_color: #ffffff;
+$secondary_color: #226f4f;
+$third_color: #4ae4a4;
+$btn_hover: #2c8c64;
+
+body{
+	background: #000 url('../img/bg_main.jpg') no-repeat fixed;
+	background-size: cover;
+	font-family: "LatoRegular" ,sans-serif;
+}
+.page_wrapper{
+	position: relative;
+	z-index: 3;
+}
+.preloader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding-top: 50%;
+	z-index: 101;
+	background: #000000;
+	color: $main_color;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.preloader_inner{
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	width: 100%;
+}
+.message{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding-top: 27%;
+	z-index: 1009;
+	background: #000000;
+	color: $main_color;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	display: none;
+}
+.message.show{
+	display: block;
+}
+a{
+	font-family: "LatoRegular" ,sans-serif;
+	color: $main_color;
+	@include transition(all, .2s);
+	&:hover,
+	&:focus{
+		text-decoration: none;
+		color: $main_color;
+	}
+}
+p{
+	font-family: "LatoRegular" ,sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	color: $main_color;
+	letter-spacing: .5px;
+	line-height: 21px;
+	a{
+		color: $third_color;
+		text-decoration: underline;
+		&:hover{
+
+		}
+	}
+}
+h1{
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	color: #ffffff;
+	line-height: 36px;
+	font-family: 'Cormorant', serif;
+	font-weight: 300;
+}
+h2{
+	font-size: 24px;
+	font-family: 'Cormorant', serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $main_color;
+	a{
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+	}
+}
+.clear{
+	clear: both;
+}
+.read_more{
+	display: block;
+	width: 221px;
+	height: 50px;
+	padding: 15px 0 0 0;
+	border: 2px solid $main_color;
+	cursor: pointer;
+	text-align: center;
+	font-size: 14px;
+	font-family: "LatoLight", sans-serif;
+	letter-spacing: .75px;
+	text-transform: uppercase;
+	color: $main_color;
+	@include transition(all, .3s);
+	&:hover{
+		border: 2px solid $secondary_color;
+		/*background: $secondary_color;*/
+		color: $main_color;
+		
+	}
+}
+@import "form/form";
+@import "header/header";
+
+@import "main/hello";
+
+@import "post/post";
+
+@import "main/main";
+
+@import "widget/widget";
+
+@import "sidebar/sidebar";
+
+@import "footer/footer";
+
+@import "media/media";
+/*
+font-family: 'Cormorant', serif;
+*/

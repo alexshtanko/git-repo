@@ -1,0 +1,44 @@
+.contact_box{
+	width: 100%;
+	padding: 80px 15px 60px;
+	background: rgba(0, 0, 0, .5);
+	margin: 34px 0;
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 80px;
+	}
+}
+.contact_box_img{
+	width: 100%;
+	text-align: center;
+	img{
+		border-radius: 200px;
+	}
+	h2{
+		margin: 25px 0 0;
+		padding: 0;
+	}
+	p{
+		margin: 8px 0;
+	}
+}
+.contact_box_text{
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+	h2{
+		margin: 0
+	}
+	a, p{
+		text-transform: uppercase;
+		color: $main_color;
+	}
+	p{
+		margin: 40px 0;
+		img{
+			margin: 0 0px;
+		}
+	}
+}

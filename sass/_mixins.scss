@@ -1,0 +1,14 @@
+@mixin rotate($rotate) {
+  -moz-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  -webkit-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+@mixin transition($p, $t){
+	-webkit-transition: $p $t linear;
+    -moz-transition: $p $t linear;
+    -o-transition: $p $t linear;
+    transition: $p $t linear;
+}

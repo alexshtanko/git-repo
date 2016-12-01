@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+	.header_nav a{
+		font-size: 18px;
+	}
+	/*---------Service -------*/
+	.service_item_footer{
+		a{
+			width: 221px;
+			float: left;
+			&:last-child{
+				float: right;
+				margin-top: 0;
+			}
+		}
+	}
+	/*-------Service end ------*/
+}
